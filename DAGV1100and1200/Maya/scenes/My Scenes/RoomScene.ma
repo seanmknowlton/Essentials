@@ -1,7 +1,11 @@
 //Maya ASCII 2025ff03 scene
-//Name: Maya ASCII.ma
-//Last modified: Tue, Sep 22, 2026 02:19:30 PM
+//Name: RoomScene.ma
+//Last modified: Tue, Sep 22, 2026 02:46:54 PM
 //Codeset: 1252
+file -rdi 1 -ns "soup" -rfn "soupRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//assets/RoomScene/soup.ma";
+file -rdi 1 -ns "spoon" -rfn "spoonRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//assets/RoomScene/spoon.ma";
+file -r -ns "soup" -dr 1 -rfn "soupRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//assets/RoomScene/soup.ma";
+file -r -ns "spoon" -dr 1 -rfn "spoonRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//assets/RoomScene/spoon.ma";
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -12,18 +16,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26200)";
-fileInfo "UUID" "ACB4AF0E-4046-5B4E-A7DA-FEAE01348167";
+fileInfo "UUID" "A1229047-4909-79C3-0D78-5ABCD995437B";
 createNode transform -s -n "persp";
 	rename -uid "A30FBC58-44B3-41F4-EA15-E487C188B33B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.9375814872509123 6.0207197561619523 12.504565269087742 ;
-	setAttr ".r" -type "double3" -16.799999999998963 -1048.0000000000166 9.3761034777332689e-16 ;
+	setAttr ".t" -type "double3" 11.73976293743241 8.4217044455775305 13.068518327056601 ;
+	setAttr ".r" -type "double3" -24.000000000000682 -1040.7999999998312 2.0521177502594488e-15 ;
 	setAttr ".rpt" -type "double3" 1.7619447684396591e-16 -4.3103591234638506e-16 -2.2092505621148981e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7DCBE2EC-470C-A75E-1529-EEB8555D8394";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 18.422536759906457;
+	setAttr ".coi" 20.365520830984451;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -15668,7 +15672,7 @@ createNode mesh -n "TankardShape2" -p "Tankard2";
 	setAttr ".dr" 1;
 createNode transform -n "Tankard1";
 	rename -uid "479BF624-4764-C33C-B3DB-04808EDE2C7B";
-	setAttr ".t" -type "double3" 2.0209756353552861 1.7306510459119233 -0.68734715330935825 ;
+	setAttr ".t" -type "double3" 1.8303611324615341 1.7306510459119233 -0.75765117014794137 ;
 	setAttr ".r" -type "double3" 0 -43.574601506195229 0 ;
 	setAttr ".s" -type "double3" 0.23936326571183483 0.23936326571183481 0.23936326571183483 ;
 createNode mesh -n "TankardShape1" -p "Tankard1";
@@ -32511,20 +32515,20 @@ createNode mesh -n "ShelfShape" -p "Shelf";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C572FFF3-4E11-DB19-9EC5-72880469BD0C";
+	rename -uid "A20C8B80-4520-0D1A-48D3-129A6956E105";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2F50B924-4C68-DE40-9CF4-3CB0E59C0B72";
+	rename -uid "EB85A394-45A4-E471-B48D-C288A0C35205";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "FC7943A9-4F52-F572-0BA6-C68B36E12BF6";
+	rename -uid "B0C40357-404D-B3FE-1222-2DBCF7645E05";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "CF61A608-4AA1-9257-9E06-2F8E4699B76F";
+	rename -uid "8259C1FB-450C-4719-8C27-1DB7158E0AD8";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5842963E-430E-D3BF-71A6-80BBFC46A03C";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7CD61BD5-44E9-908F-FC48-58AC11A587BD";
+	rename -uid "16AD6AFF-49C4-CEC2-0191-CA88FD192710";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "0EA38DB2-43F1-09F6-185D-83B29985B741";
 	setAttr ".g" yes;
@@ -35223,6 +35227,38 @@ createNode shadingEngine -n "lambert1SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "2983304F-4857-042C-5256-1EB7BE6AE17E";
+createNode reference -n "soupRN";
+	rename -uid "B41772AE-446B-E17E-617A-35A5B6112BDD";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"soupRN"
+		"soupRN" 0
+		"soupRN" 3
+		2 "|soup:soup" "translate" " -type \"double3\" 2.32287382294624667 1.3327298912213128 0.4499345464067126"
+		
+		2 "|soup:soup" "rotate" " -type \"double3\" 0 55.4996672484784952 0"
+		2 "|soup:soup" "scale" " -type \"double3\" 0.58302431955213474 0.46122710187965565 0.58302431955213474";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "spoonRN";
+	rename -uid "57AF3455-42BA-4DEF-602A-CCA534AAE98F";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"spoonRN"
+		"spoonRN" 3
+		2 "|spoon:spoon" "translate" " -type \"double3\" 2.70138992937133304 1.54470648759201978 -0.0098621107923544393"
+		
+		2 "|spoon:spoon" "rotate" " -type \"double3\" 0 51.3983586224854605 0"
+		2 "|spoon:spoon" "scale" " -type \"double3\" 0.062587794458884322 0.061904467128030195 0.35593345356951733"
+		
+		"spoonRN" 4
+		2 "|spoon:polySurface1" "translate" " -type \"double3\" 2.78751137302894358 1.48788912927775763 -0.41460263952291854"
+		
+		2 "|spoon:polySurface1" "rotate" " -type \"double3\" 0 61.6698444132796979 0"
+		
+		2 "|spoon:polySurface1" "scale" " -type \"double3\" 0.44571664270137684 0.44571664270137684 0.44571664270137684"
+		
+		2 "|spoon:polySurface1" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -35250,9 +35286,9 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 71 ".dsm";
+	setAttr -s 75 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 14 ".gn";
+	setAttr -s 15 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -35536,4 +35572,4 @@ connectAttr "groupId307.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId308.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId309.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId318.msg" ":initialShadingGroup.gn" -na;
-// End of Maya ASCII.ma
+// End of RoomScene.ma
