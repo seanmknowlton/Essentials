@@ -300,6 +300,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c52d98e0d634e54a97fd0cea02d49ff, type: 3}
+--- !u!1001 &238911155
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1800998573}
+    m_Modifications:
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090669513193829020, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: m_Name
+      value: CoinParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723483694048841866, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.020247417
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723483694048841866, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.657015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723483694048841866, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.8584906
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
 --- !u!1 &324737061
 GameObject:
   m_ObjectHideFlags: 0
@@ -3388,7 +3461,8 @@ Transform:
   m_LocalPosition: {x: -4.8, y: 1.47, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1962348944}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1800998574
@@ -3441,6 +3515,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1962348942}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Emit
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 25
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3855,6 +3941,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!198 &1962348942 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3723483694048841866, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+  m_PrefabInstance: {fileID: 238911155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1962348944 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1335937627517896556, guid: 7dd8fa7b942b0ba47bcd0563ad47c950, type: 3}
+  m_PrefabInstance: {fileID: 238911155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1999625659
 PrefabInstance:
   m_ObjectHideFlags: 0
